@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css?family=Varela+Round");
+
+:root {
+  --primary: mediumslateblue;
+  --primary-light: rgb(150, 134, 238);
+  --primary-dark: rgb(85, 58, 236);
+
+  --secondary: cyan;
+  --secondary-dark: rgb(18, 170, 170);
+
+  --white: #fff;
+  --black: #111;
+
+  --font: "Varela Round", sans-serif;
+}
+
+body {
+  background: var(--white);
+  font-family: var(--font);
+  font-weight: 300;
+  font-size: 16px;
+  margin: 30px;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+header {
+  height: auto;
+  padding: 1em 0 2em 0;
+  margin: 0 auto;
+  text-align: center;
+  width: auto;
+  color: #fff;
+  background: var(--primary);
+}
+
+.app-title {
+  font-size: 3em;
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 0;
+  color: var(--white);
+}
+
+.app-title img {
+  position: relative;
+  top: 26px;
+  margin: 0;
+  padding: 0;
+  height: 80px;
+  width: auto;
+}
+
+.app-description {
+  font-size: 1.2em;
+  margin: 5px 0 30px 0;
+  color: var(--white);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 10px;
+  margin: 0 10px;
+  animation: 0.45s ease-in-out 0s fadeInUp;
+}
+
+.card {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 1em;
+  margin: 10px;
+  background: var(--white);
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transform: translateY(0px);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.card-title {
+  color: var(--primary);
+  font-weight: 700;
+  line-height: 1.5;
+  font-size: 1.4em;
+}
+
+.card-description {
+  color: var(--primary-light);
+  opacity: 0.75;
+}
+
+.card-link {
+  color: var(--secondary);
+  text-decoration: underline;
+}
+
+.card-btn {
+  align-self: flex-end;
+  border: none;
+  padding: 0.5em;
+  margin-top: 0.5em;
+  border-radius: 3px;
+  line-height: 1;
+  color: var(--secondary);
+  font-weight: 800;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.card-btn .icon {
+  color: var(--primary);
+}
+
+input[type="text"] {
+  font-family: var(--font);
+  width: 50%;
+  margin: 0;
+  border-radius: 3px;
+  background-color: #fff;
+  border: 2px solid white;
+  padding: 1em;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(15px);
+    transition: all 0.15s cubic-bezier(0.25, 0.8, 0.25, 1);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    transition: all 0.15s cubic-bezier(0.25, 0.8, 0.25, 1);
+    opacity: 1;
+  }
+}
+
+/* Responsividade */
+
+/* Smartphones, 480px */
+
+@media screen and (min-width: 320px) {
+  .card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: 5px;
+    column-gap: 5px;
+    margin: 10px;
+    animation: 0.45s ease-in-out 0s fadeInUp;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: 5px;
+    column-gap: 5px;
+    margin: 10px;
+    animation: 0.45s ease-in-out 0s fadeInUp;
+  }
+}
+
+/* Tablets, 768px */
+
+@media only screen and (min-width: 768px) {
+  .card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    row-gap: 5px;
+    column-gap: 5px;
+    margin: 10px;
+    animation: 0.45s ease-in-out 0s fadeInUp;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    row-gap: 5px;
+    column-gap: 5px;
+    margin: 10px;
+    animation: 0.45s ease-in-out 0s fadeInUp;
+  }
+}

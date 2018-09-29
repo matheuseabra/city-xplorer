@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Maps | City Xplorer</title>
+	<link rel="stylesheet" href="src/css/newLayout.css">
+	<link rel="stylesheet" href="src/css/normalize.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+	 crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+	 #map { height: 100%; } html, body { height: 100%; width: 100%; margin: 0; }
+</style>
+</head>
+
+<body>
+	<header>	
+		<h1 class="app-title"><img src="src/img/map-logo.svg"> Map Xplorer</h1>
+		<p class="app-description">Explore places around the world</p>
+		<input type="text" placeholder="Search by Country, Province or City" id="userCity" />
+	</header>
+
+	<div id="map">
+		
+	</div>
+
+
+  <script src="src/js/map.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_lJ-_eIGXGtKe_ml_093ElISs9l3d4NY&callback=initMap" async defer></script>
+</body>
+
+</html>
