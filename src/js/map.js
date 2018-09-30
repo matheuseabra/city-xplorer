@@ -4,7 +4,7 @@ function initMap() {
     center: { lat: 1.4557, lng: 48.4902 }
   });
   var geocoder = new google.maps.Geocoder();
-
+  
   document.getElementById("userCity").addEventListener("change", function() {
     geocodeAddress(geocoder, map);
   });

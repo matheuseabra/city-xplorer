@@ -12,12 +12,13 @@
   --black: #111;
 
   --font: "Varela Round", sans-serif;
+  --font-weight: 300;
 }
 
 body {
   background: var(--white);
   font-family: var(--font);
-  font-weight: 300;
+  font-weight: var(--font-weight);
   font-size: 16px;
   margin: 30px;
   padding: 0;
@@ -35,13 +36,15 @@ header {
   margin: 0 auto;
   text-align: center;
   width: auto;
-  color: #fff;
-  background: var(--primary);
+  color: var(--white);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; 
 }
 
 .app-title {
   font-size: 3em;
-  font-weight: 300;
+  font-weight: var(--font-weight);
   line-height: 1.5;
   margin: 0;
   color: var(--white);
