@@ -1,12 +1,21 @@
 function initMap() {
-  var map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 5,
-    center: { lat: 1.4557, lng: 48.4902 }
-  });
-  var geocoder = new google.maps.Geocoder();
-  
-  document.getElementById("userCity").addEventListener("change", function() {
-    geocodeAddress(geocoder, map);
+  //Get current device's position
+  navigator.geolocation.getCurrentPosition(position => {
+    let currentPosition = {
+      lat: position.coords.latitude,
+      lng: position.coords.longitude
+    };
+
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 12,
+      center: { lat: currentPosition.lat, lng: currentPosition.lng }
+    });
+
+    const geocoder = new google.maps.Geocoder();
+
+    document.getElementById("userCity").addEventListener("change", function() {
+      geocodeAddress(geocoder, map);
+    });
   });
 }
 
